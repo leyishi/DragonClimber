@@ -16,6 +16,12 @@
 		A55CD1141D36E296004360DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1121D36E296004360DA /* LaunchScreen.storyboard */; };
 		A55CD11F1D36E296004360DA /* Dragon_ClimberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD11E1D36E296004360DA /* Dragon_ClimberTests.swift */; };
 		A55CD12A1D36E296004360DA /* Dragon_ClimberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1291D36E296004360DA /* Dragon_ClimberUITests.swift */; };
+		A55CD1381D36E2B3004360DA /* PracticeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1371D36E2B3004360DA /* PracticeBG.png */; };
+		A55CD13A1D36E2BB004360DA /* mound_modular_1c_al1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */; };
+		A55CD13C1D36E2C1004360DA /* mound_modular_1d_al1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */; };
+		A55CD13E1D36E353004360DA /* Outer Circle_TryCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */; };
+		A55CD1401D36E389004360DA /* Try1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13F1D36E389004360DA /* Try1.png */; };
+		A55CD1421D36FED9004360DA /* Rock Climbing Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		A55CD1251D36E296004360DA /* Dragon ClimberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dragon ClimberUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55CD1291D36E296004360DA /* Dragon_ClimberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_ClimberUITests.swift; sourceTree = "<group>"; };
 		A55CD12B1D36E296004360DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55CD1371D36E2B3004360DA /* PracticeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PracticeBG.png; sourceTree = "<group>"; };
+		A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mound_modular_1c_al1.png; sourceTree = "<group>"; };
+		A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mound_modular_1d_al1.png; sourceTree = "<group>"; };
+		A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Outer Circle_TryCircle.png"; sourceTree = "<group>"; };
+		A55CD13F1D36E389004360DA /* Try1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Try1.png; sourceTree = "<group>"; };
+		A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rock Climbing Wall.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,12 @@
 				A55CD10D1D36E296004360DA /* Main.storyboard */,
 				A55CD1101D36E296004360DA /* Assets.xcassets */,
 				A55CD1121D36E296004360DA /* LaunchScreen.storyboard */,
+				A55CD1371D36E2B3004360DA /* PracticeBG.png */,
+				A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */,
+				A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */,
+				A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */,
+				A55CD13F1D36E389004360DA /* Try1.png */,
+				A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */,
 				A55CD1151D36E296004360DA /* Info.plist */,
 			);
 			path = "Dragon Climber";
@@ -199,6 +217,7 @@
 				TargetAttributes = {
 					A55CD1011D36E296004360DA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4T59EGLW9L;
 					};
 					A55CD1191D36E296004360DA = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -235,9 +254,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55CD1401D36E389004360DA /* Try1.png in Resources */,
 				A55CD1081D36E296004360DA /* GameScene.sks in Resources */,
 				A55CD1141D36E296004360DA /* LaunchScreen.storyboard in Resources */,
 				A55CD1111D36E296004360DA /* Assets.xcassets in Resources */,
+				A55CD13C1D36E2C1004360DA /* mound_modular_1d_al1.png in Resources */,
+				A55CD1421D36FED9004360DA /* Rock Climbing Wall.png in Resources */,
+				A55CD13A1D36E2BB004360DA /* mound_modular_1c_al1.png in Resources */,
+				A55CD1381D36E2B3004360DA /* PracticeBG.png in Resources */,
+				A55CD13E1D36E353004360DA /* Outer Circle_TryCircle.png in Resources */,
 				A55CD10F1D36E296004360DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Dragon Climber/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Dragon-Climber";
@@ -420,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Dragon Climber/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Dragon-Climber";
