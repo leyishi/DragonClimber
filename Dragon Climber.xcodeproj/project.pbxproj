@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53ABA7A1D3EE1E30030E7E4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53ABA791D3EE1E30030E7E4 /* Player.swift */; };
+		A542FEFD1D3D4A61001335B5 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FEFC1D3D4A61001335B5 /* Rock.swift */; };
 		A55CD1061D36E296004360DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1051D36E296004360DA /* AppDelegate.swift */; };
 		A55CD1081D36E296004360DA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1071D36E296004360DA /* GameScene.sks */; };
 		A55CD10A1D36E296004360DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1091D36E296004360DA /* GameScene.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A53ABA791D3EE1E30030E7E4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A542FEFC1D3D4A61001335B5 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
 		A55CD1021D36E296004360DA /* Dragon Climber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dragon Climber.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55CD1051D36E296004360DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A55CD1071D36E296004360DA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				A55CD1051D36E296004360DA /* AppDelegate.swift */,
 				A55CD1071D36E296004360DA /* GameScene.sks */,
 				A55CD1091D36E296004360DA /* GameScene.swift */,
+				A53ABA791D3EE1E30030E7E4 /* Player.swift */,
+				A542FEFC1D3D4A61001335B5 /* Rock.swift */,
 				A55CD10B1D36E296004360DA /* GameViewController.swift */,
 				A55CD10D1D36E296004360DA /* Main.storyboard */,
 				A55CD1101D36E296004360DA /* Assets.xcassets */,
@@ -288,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A542FEFD1D3D4A61001335B5 /* Rock.swift in Sources */,
 				A55CD10A1D36E296004360DA /* GameScene.swift in Sources */,
 				A55CD10C1D36E296004360DA /* GameViewController.swift in Sources */,
+				A53ABA7A1D3EE1E30030E7E4 /* Player.swift in Sources */,
 				A55CD1061D36E296004360DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +529,7 @@
 				A55CD1301D36E296004360DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A55CD1311D36E296004360DA /* Build configuration list for PBXNativeTarget "Dragon ClimberTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +538,7 @@
 				A55CD1331D36E296004360DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A55CD1341D36E296004360DA /* Build configuration list for PBXNativeTarget "Dragon ClimberUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +547,7 @@
 				A55CD1361D36E296004360DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
