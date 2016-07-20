@@ -10,7 +10,12 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    let scrollSpeed: CGFloat = 160                  /* Scroll Speed */
+    
+    enum GameState {                                  /* different game states */
+        case Title, Loading, Playing, Gameover
+    }
+    
+    var scrollSpeed: CGFloat = 140                  /* Scroll Speed */
     let fixedDelta: CFTimeInterval = 1.0/60.0       /* 60 FPS */
     var scrollLayer: SKNode!                        /* UI Connections */
     var stoneLayer: SKNode!
@@ -21,6 +26,8 @@ class GameScene: SKScene {
     var player: SKSpriteNode! = nil        /* player object that moves to the target */
     var rope: SKShapeNode!                 /* rope between player and target */
     var target: SKSpriteNode!              /* target that player moves to */
+    var gameState: GameState = .Loading    /* game state management */
+    
    
     override func didMoveToView(view: SKView) {
         /* Setup scene here */
@@ -35,7 +42,7 @@ class GameScene: SKScene {
         stoneLayer.addChild(rock)
         
         /* adds number of random rocks */
-        addRandomRocks(15)
+        addRandomRocks(12)
         
         /* Player */
         player = Player()
@@ -62,19 +69,27 @@ class GameScene: SKScene {
 
         // Get the location of the touch
         let touch = touches.first!
-        let location = touch.locationInNode(scrollLayer)
+        var location = touch.locationInNode(scrollLayer)
+        var getNode = stoneLayer.nodeAtPoint(location)
         
         // Set up some actions that will move the target to the touch location
-        let launchHook = SKAction.moveTo(location, duration: 0.25)
+        var launchHook = SKAction.moveTo(location, duration: 0.25)
         target.runAction(launchHook)
         
         // Setup an action that will move the player to the location of the touch
-        // This time add a wait so the player follows a moment later.
-        let wait = SKAction.waitForDuration(0.25)
-        let movePlayer = SKAction.moveTo(location, duration: 0.25)
-        let playerAction = SKAction.sequence([wait, movePlayer])
-        player.runAction(playerAction)
-
+        // This time adds a wait so the player follows a moment later
+        
+        if let newRock = getNode as? Rock {
+            let wait = SKAction.waitForDuration(0.25)
+            let movePlayer = SKAction.moveTo(location, duration: 0.25)
+            let playerAction = SKAction.sequence([wait, movePlayer])
+            player.runAction(playerAction)
+        } else {
+            let hookWait = SKAction.waitForDuration(0.25)
+            let moveHook = SKAction.moveTo(player.position, duration: 0.50)
+            let reverseLaunchHook = SKAction.sequence([hookWait, moveHook])
+            target.runAction(reverseLaunchHook)
+        }
         
     }
     
@@ -90,6 +105,9 @@ class GameScene: SKScene {
         
         /* Process re-positioning of rocks */
         updateRocks()
+        
+        /* Speeds up scrolling of the world */
+        scrollSpeed += 0.05
         
         // This code draws a line between the player and target
         let ropePath = CGPathCreateMutable()
@@ -118,7 +136,7 @@ class GameScene: SKScene {
          /* adds rocks with random x positions and increasing by 65 in the y position */
         var newY = 0
         for _ in 0..<nTimes {
-            newY += Int(arc4random_uniform(UInt32(75) + 50))
+            newY += Int(arc4random_uniform(UInt32(40) + 35))
             let newRock = Rock()
             let x = Int(arc4random_uniform(UInt32(200)))
             newRock.position = CGPoint(x: x, y: newY)
@@ -140,6 +158,14 @@ class GameScene: SKScene {
                     rock.position = CGPoint(x: x, y: newY)
                 }
         }
+    }
+    
+    func gameOver() {
+        // Game Over state
+        gameState = .Gameover
+        
+        // Makes the player fall off the screen
+        
     }
     
     
