@@ -9,12 +9,11 @@
 import Foundation
 import SpriteKit
 
-class Rock: SKSpriteNode {
+class Rock: SKSpriteNode, SKPhysicsContactDelegate{
     
     init() {
-        let texture = SKTexture(imageNamed: "mound_modular_1c_al1.png")
+        let texture = SKTexture(imageNamed: "Bamboo")
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        self.setScale(0.15)
         self.zPosition = 3
 
     }

@@ -12,16 +12,16 @@ import SpriteKit
 class Player: SKSpriteNode {
     
     init() {
-        let texture = SKTexture(imageNamed: "Try1.png")
+        let texture = SKTexture(imageNamed: "FNB.png")
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        self.zPosition = 4
+        self.name = "player"
+        self.zPosition = 6
         self.position.x = 200
         self.position.y = 300
         self.physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
         self.physicsBody?.allowsRotation = false
+        self.physicsBody?.categoryBitMask = 1
         self.physicsBody?.dynamic = false
-        self.setScale(0.5)
-        
     }
     
     

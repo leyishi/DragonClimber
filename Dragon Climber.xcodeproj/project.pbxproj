@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51750C01D495642009A3ED7 /* Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750BF1D495642009A3ED7 /* Wall.png */; };
+		A51750C21D495867009A3ED7 /* Bamboo.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750C11D495867009A3ED7 /* Bamboo.png */; };
+		A51750C41D495C09009A3ED7 /* Shuriken.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750C31D495C09009A3ED7 /* Shuriken.png */; };
+		A51750C61D495C13009A3ED7 /* FNB.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750C51D495C13009A3ED7 /* FNB.png */; };
+		A51750C81D495CF0009A3ED7 /* ropeTexture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A51750C71D495CF0009A3ED7 /* ropeTexture.jpg */; };
+		A51750CA1D49778B009A3ED7 /* Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750C91D49778B009A3ED7 /* Sun.png */; };
+		A51750CE1D497798009A3ED7 /* Play Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750CD1D497798009A3ED7 /* Play Button.png */; };
+		A51750D01D4977B3009A3ED7 /* ShurikenTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750CF1D4977B3009A3ED7 /* ShurikenTitle.png */; };
+		A51750D21D49780E009A3ED7 /* TitleScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = A51750D11D49780E009A3ED7 /* TitleScreen.sks */; };
+		A51750D61D497888009A3ED7 /* Lucky Cat.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750D51D497888009A3ED7 /* Lucky Cat.png */; };
+		A51750D81D497956009A3ED7 /* Rotating Sun.sks in Resources */ = {isa = PBXBuildFile; fileRef = A51750D71D497956009A3ED7 /* Rotating Sun.sks */; };
+		A51750DA1D4979C9009A3ED7 /* MyActions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A51750D91D4979C9009A3ED7 /* MyActions.sks */; };
+		A51750DE1D497CB8009A3ED7 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750DD1D497CB8009A3ED7 /* TitleScreen.png */; };
+		A51750E01D497D41009A3ED7 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51750DF1D497D41009A3ED7 /* TitleScreen.swift */; };
+		A51750E21D497D86009A3ED7 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51750E11D497D86009A3ED7 /* MSButtonNode.swift */; };
+		A51750E61D4A876F009A3ED7 /* avalancheRock.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E51D4A876F009A3ED7 /* avalancheRock.png */; };
+		A51750E81D4ABD55009A3ED7 /* !.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E71D4ABD55009A3ED7 /* !.png */; };
+		A51750EA1D4ABE65009A3ED7 /* ! Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E91D4ABE65009A3ED7 /* ! Black.png */; };
 		A53ABA7A1D3EE1E30030E7E4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53ABA791D3EE1E30030E7E4 /* Player.swift */; };
 		A542FEFD1D3D4A61001335B5 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FEFC1D3D4A61001335B5 /* Rock.swift */; };
 		A55CD1061D36E296004360DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1051D36E296004360DA /* AppDelegate.swift */; };
@@ -18,12 +36,14 @@
 		A55CD1141D36E296004360DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1121D36E296004360DA /* LaunchScreen.storyboard */; };
 		A55CD11F1D36E296004360DA /* Dragon_ClimberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD11E1D36E296004360DA /* Dragon_ClimberTests.swift */; };
 		A55CD12A1D36E296004360DA /* Dragon_ClimberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1291D36E296004360DA /* Dragon_ClimberUITests.swift */; };
-		A55CD1381D36E2B3004360DA /* PracticeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1371D36E2B3004360DA /* PracticeBG.png */; };
-		A55CD13A1D36E2BB004360DA /* mound_modular_1c_al1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */; };
-		A55CD13C1D36E2C1004360DA /* mound_modular_1d_al1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */; };
-		A55CD13E1D36E353004360DA /* Outer Circle_TryCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */; };
-		A55CD1401D36E389004360DA /* Try1.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD13F1D36E389004360DA /* Try1.png */; };
-		A55CD1421D36FED9004360DA /* Rock Climbing Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */; };
+		A5AEF3AE1D4043D6007BA947 /* gameMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5AEF3AD1D4043D6007BA947 /* gameMusic.mp3 */; };
+		A5F407201D48312D000AD164 /* Cloud1.sks in Resources */ = {isa = PBXBuildFile; fileRef = A5F4071F1D48312D000AD164 /* Cloud1.sks */; };
+		A5F407221D483145000AD164 /* Cloud1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F407211D483145000AD164 /* Cloud1.png */; };
+		A5F407241D48315E000AD164 /* Cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F407231D48315E000AD164 /* Cloud2.png */; };
+		A5F407261D483166000AD164 /* Cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F407251D483166000AD164 /* Cloud3.png */; };
+		A5F407281D4832F6000AD164 /* Cloud2.sks in Resources */ = {isa = PBXBuildFile; fileRef = A5F407271D4832F6000AD164 /* Cloud2.sks */; };
+		A5F4072A1D4833AB000AD164 /* Cloud3.sks in Resources */ = {isa = PBXBuildFile; fileRef = A5F407291D4833AB000AD164 /* Cloud3.sks */; };
+		A5F407311D483649000AD164 /* BackgroundMain.png in Resources */ = {isa = PBXBuildFile; fileRef = A5F407301D483649000AD164 /* BackgroundMain.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +64,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A51750BF1D495642009A3ED7 /* Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wall.png; sourceTree = "<group>"; };
+		A51750C11D495867009A3ED7 /* Bamboo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bamboo.png; sourceTree = "<group>"; };
+		A51750C31D495C09009A3ED7 /* Shuriken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shuriken.png; sourceTree = "<group>"; };
+		A51750C51D495C13009A3ED7 /* FNB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FNB.png; sourceTree = "<group>"; };
+		A51750C71D495CF0009A3ED7 /* ropeTexture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ropeTexture.jpg; sourceTree = "<group>"; };
+		A51750C91D49778B009A3ED7 /* Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun.png; sourceTree = "<group>"; };
+		A51750CD1D497798009A3ED7 /* Play Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button.png"; sourceTree = "<group>"; };
+		A51750CF1D4977B3009A3ED7 /* ShurikenTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShurikenTitle.png; sourceTree = "<group>"; };
+		A51750D11D49780E009A3ED7 /* TitleScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScreen.sks; sourceTree = "<group>"; };
+		A51750D51D497888009A3ED7 /* Lucky Cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lucky Cat.png"; sourceTree = "<group>"; };
+		A51750D71D497956009A3ED7 /* Rotating Sun.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = "Rotating Sun.sks"; path = "../Rotating Sun.sks"; sourceTree = "<group>"; };
+		A51750D91D4979C9009A3ED7 /* MyActions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyActions.sks; path = ../MyActions.sks; sourceTree = "<group>"; };
+		A51750DD1D497CB8009A3ED7 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen.png; sourceTree = "<group>"; };
+		A51750DF1D497D41009A3ED7 /* TitleScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		A51750E11D497D86009A3ED7 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		A51750E51D4A876F009A3ED7 /* avalancheRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avalancheRock.png; sourceTree = "<group>"; };
+		A51750E71D4ABD55009A3ED7 /* !.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!.png"; sourceTree = "<group>"; };
+		A51750E91D4ABE65009A3ED7 /* ! Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "! Black.png"; sourceTree = "<group>"; };
 		A53ABA791D3EE1E30030E7E4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A542FEFC1D3D4A61001335B5 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
 		A55CD1021D36E296004360DA /* Dragon Climber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dragon Climber.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,12 +99,14 @@
 		A55CD1251D36E296004360DA /* Dragon ClimberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dragon ClimberUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55CD1291D36E296004360DA /* Dragon_ClimberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_ClimberUITests.swift; sourceTree = "<group>"; };
 		A55CD12B1D36E296004360DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A55CD1371D36E2B3004360DA /* PracticeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PracticeBG.png; sourceTree = "<group>"; };
-		A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mound_modular_1c_al1.png; sourceTree = "<group>"; };
-		A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mound_modular_1d_al1.png; sourceTree = "<group>"; };
-		A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Outer Circle_TryCircle.png"; sourceTree = "<group>"; };
-		A55CD13F1D36E389004360DA /* Try1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Try1.png; sourceTree = "<group>"; };
-		A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rock Climbing Wall.png"; sourceTree = "<group>"; };
+		A5AEF3AD1D4043D6007BA947 /* gameMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic.mp3; sourceTree = "<group>"; };
+		A5F4071F1D48312D000AD164 /* Cloud1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cloud1.sks; sourceTree = "<group>"; };
+		A5F407211D483145000AD164 /* Cloud1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud1.png; sourceTree = "<group>"; };
+		A5F407231D48315E000AD164 /* Cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud2.png; sourceTree = "<group>"; };
+		A5F407251D483166000AD164 /* Cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cloud3.png; sourceTree = "<group>"; };
+		A5F407271D4832F6000AD164 /* Cloud2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cloud2.sks; sourceTree = "<group>"; };
+		A5F407291D4833AB000AD164 /* Cloud3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cloud3.sks; sourceTree = "<group>"; };
+		A5F407301D483649000AD164 /* BackgroundMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundMain.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,18 +160,36 @@
 				A55CD1051D36E296004360DA /* AppDelegate.swift */,
 				A55CD1071D36E296004360DA /* GameScene.sks */,
 				A55CD1091D36E296004360DA /* GameScene.swift */,
+				A51750D11D49780E009A3ED7 /* TitleScreen.sks */,
+				A51750DF1D497D41009A3ED7 /* TitleScreen.swift */,
+				A55CD10B1D36E296004360DA /* GameViewController.swift */,
+				A51750D91D4979C9009A3ED7 /* MyActions.sks */,
 				A53ABA791D3EE1E30030E7E4 /* Player.swift */,
 				A542FEFC1D3D4A61001335B5 /* Rock.swift */,
-				A55CD10B1D36E296004360DA /* GameViewController.swift */,
+				A51750D71D497956009A3ED7 /* Rotating Sun.sks */,
+				A51750E11D497D86009A3ED7 /* MSButtonNode.swift */,
 				A55CD10D1D36E296004360DA /* Main.storyboard */,
 				A55CD1101D36E296004360DA /* Assets.xcassets */,
+				A5F4072D1D483609000AD164 /* Cloud Particles */,
 				A55CD1121D36E296004360DA /* LaunchScreen.storyboard */,
-				A55CD1371D36E2B3004360DA /* PracticeBG.png */,
-				A55CD1391D36E2BB004360DA /* mound_modular_1c_al1.png */,
-				A55CD13D1D36E353004360DA /* Outer Circle_TryCircle.png */,
-				A55CD1411D36FED9004360DA /* Rock Climbing Wall.png */,
-				A55CD13F1D36E389004360DA /* Try1.png */,
-				A55CD13B1D36E2C1004360DA /* mound_modular_1d_al1.png */,
+				A51750D51D497888009A3ED7 /* Lucky Cat.png */,
+				A51750DD1D497CB8009A3ED7 /* TitleScreen.png */,
+				A51750CD1D497798009A3ED7 /* Play Button.png */,
+				A51750E71D4ABD55009A3ED7 /* !.png */,
+				A51750E91D4ABE65009A3ED7 /* ! Black.png */,
+				A51750C91D49778B009A3ED7 /* Sun.png */,
+				A51750CF1D4977B3009A3ED7 /* ShurikenTitle.png */,
+				A51750E51D4A876F009A3ED7 /* avalancheRock.png */,
+				A51750C71D495CF0009A3ED7 /* ropeTexture.jpg */,
+				A51750C31D495C09009A3ED7 /* Shuriken.png */,
+				A51750C11D495867009A3ED7 /* Bamboo.png */,
+				A51750C51D495C13009A3ED7 /* FNB.png */,
+				A51750BF1D495642009A3ED7 /* Wall.png */,
+				A5F407301D483649000AD164 /* BackgroundMain.png */,
+				A5F407211D483145000AD164 /* Cloud1.png */,
+				A5F407231D48315E000AD164 /* Cloud2.png */,
+				A5F407251D483166000AD164 /* Cloud3.png */,
+				A5AEF3AD1D4043D6007BA947 /* gameMusic.mp3 */,
 				A55CD1151D36E296004360DA /* Info.plist */,
 			);
 			path = "Dragon Climber";
@@ -153,6 +211,16 @@
 				A55CD12B1D36E296004360DA /* Info.plist */,
 			);
 			path = "Dragon ClimberUITests";
+			sourceTree = "<group>";
+		};
+		A5F4072D1D483609000AD164 /* Cloud Particles */ = {
+			isa = PBXGroup;
+			children = (
+				A5F4071F1D48312D000AD164 /* Cloud1.sks */,
+				A5F407271D4832F6000AD164 /* Cloud2.sks */,
+				A5F407291D4833AB000AD164 /* Cloud3.sks */,
+			);
+			name = "Cloud Particles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,16 +328,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55CD1401D36E389004360DA /* Try1.png in Resources */,
+				A51750D61D497888009A3ED7 /* Lucky Cat.png in Resources */,
+				A51750C21D495867009A3ED7 /* Bamboo.png in Resources */,
+				A5F407221D483145000AD164 /* Cloud1.png in Resources */,
+				A51750C41D495C09009A3ED7 /* Shuriken.png in Resources */,
 				A55CD1081D36E296004360DA /* GameScene.sks in Resources */,
 				A55CD1141D36E296004360DA /* LaunchScreen.storyboard in Resources */,
+				A51750DE1D497CB8009A3ED7 /* TitleScreen.png in Resources */,
+				A5F407281D4832F6000AD164 /* Cloud2.sks in Resources */,
+				A51750CE1D497798009A3ED7 /* Play Button.png in Resources */,
+				A51750C01D495642009A3ED7 /* Wall.png in Resources */,
+				A5F407261D483166000AD164 /* Cloud3.png in Resources */,
 				A55CD1111D36E296004360DA /* Assets.xcassets in Resources */,
-				A55CD13C1D36E2C1004360DA /* mound_modular_1d_al1.png in Resources */,
-				A55CD1421D36FED9004360DA /* Rock Climbing Wall.png in Resources */,
-				A55CD13A1D36E2BB004360DA /* mound_modular_1c_al1.png in Resources */,
-				A55CD1381D36E2B3004360DA /* PracticeBG.png in Resources */,
-				A55CD13E1D36E353004360DA /* Outer Circle_TryCircle.png in Resources */,
+				A51750EA1D4ABE65009A3ED7 /* ! Black.png in Resources */,
+				A51750E81D4ABD55009A3ED7 /* !.png in Resources */,
+				A51750E61D4A876F009A3ED7 /* avalancheRock.png in Resources */,
+				A5AEF3AE1D4043D6007BA947 /* gameMusic.mp3 in Resources */,
+				A51750D01D4977B3009A3ED7 /* ShurikenTitle.png in Resources */,
+				A51750D21D49780E009A3ED7 /* TitleScreen.sks in Resources */,
+				A51750DA1D4979C9009A3ED7 /* MyActions.sks in Resources */,
+				A51750CA1D49778B009A3ED7 /* Sun.png in Resources */,
+				A5F407201D48312D000AD164 /* Cloud1.sks in Resources */,
+				A51750D81D497956009A3ED7 /* Rotating Sun.sks in Resources */,
+				A5F4072A1D4833AB000AD164 /* Cloud3.sks in Resources */,
+				A51750C81D495CF0009A3ED7 /* ropeTexture.jpg in Resources */,
+				A5F407241D48315E000AD164 /* Cloud2.png in Resources */,
+				A51750C61D495C13009A3ED7 /* FNB.png in Resources */,
 				A55CD10F1D36E296004360DA /* Main.storyboard in Resources */,
+				A5F407311D483649000AD164 /* BackgroundMain.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,10 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A542FEFD1D3D4A61001335B5 /* Rock.swift in Sources */,
+				A51750E01D497D41009A3ED7 /* TitleScreen.swift in Sources */,
 				A55CD10A1D36E296004360DA /* GameScene.swift in Sources */,
 				A55CD10C1D36E296004360DA /* GameViewController.swift in Sources */,
 				A53ABA7A1D3EE1E30030E7E4 /* Player.swift in Sources */,
 				A55CD1061D36E296004360DA /* AppDelegate.swift in Sources */,
+				A51750E21D497D86009A3ED7 /* MSButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
