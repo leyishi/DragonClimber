@@ -25,10 +25,14 @@
 		A51750E61D4A876F009A3ED7 /* avalancheRock.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E51D4A876F009A3ED7 /* avalancheRock.png */; };
 		A51750E81D4ABD55009A3ED7 /* !.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E71D4ABD55009A3ED7 /* !.png */; };
 		A51750EA1D4ABE65009A3ED7 /* ! Black.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750E91D4ABE65009A3ED7 /* ! Black.png */; };
+		A51750EC1D4C073B009A3ED7 /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750EB1D4C073B009A3ED7 /* pauseButton.png */; };
+		A51750EE1D4C0913009A3ED7 /* playButtonInGame.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750ED1D4C0913009A3ED7 /* playButtonInGame.png */; };
+		A51750F01D4C0917009A3ED7 /* restartButtonInGame.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750EF1D4C0917009A3ED7 /* restartButtonInGame.png */; };
+		A51750F21D4C091C009A3ED7 /* dropDownMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = A51750F11D4C091C009A3ED7 /* dropDownMenu.png */; };
+		A51750F41D4C0A04009A3ED7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A51750F31D4C0A04009A3ED7 /* GameScene.sks */; };
 		A53ABA7A1D3EE1E30030E7E4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53ABA791D3EE1E30030E7E4 /* Player.swift */; };
 		A542FEFD1D3D4A61001335B5 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FEFC1D3D4A61001335B5 /* Rock.swift */; };
 		A55CD1061D36E296004360DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1051D36E296004360DA /* AppDelegate.swift */; };
-		A55CD1081D36E296004360DA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A55CD1071D36E296004360DA /* GameScene.sks */; };
 		A55CD10A1D36E296004360DA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD1091D36E296004360DA /* GameScene.swift */; };
 		A55CD10C1D36E296004360DA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CD10B1D36E296004360DA /* GameViewController.swift */; };
 		A55CD10F1D36E296004360DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55CD10D1D36E296004360DA /* Main.storyboard */; };
@@ -82,11 +86,15 @@
 		A51750E51D4A876F009A3ED7 /* avalancheRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avalancheRock.png; sourceTree = "<group>"; };
 		A51750E71D4ABD55009A3ED7 /* !.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!.png"; sourceTree = "<group>"; };
 		A51750E91D4ABE65009A3ED7 /* ! Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "! Black.png"; sourceTree = "<group>"; };
+		A51750EB1D4C073B009A3ED7 /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
+		A51750ED1D4C0913009A3ED7 /* playButtonInGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButtonInGame.png; sourceTree = "<group>"; };
+		A51750EF1D4C0917009A3ED7 /* restartButtonInGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restartButtonInGame.png; sourceTree = "<group>"; };
+		A51750F11D4C091C009A3ED7 /* dropDownMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropDownMenu.png; sourceTree = "<group>"; };
+		A51750F31D4C0A04009A3ED7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A53ABA791D3EE1E30030E7E4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A542FEFC1D3D4A61001335B5 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
 		A55CD1021D36E296004360DA /* Dragon Climber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dragon Climber.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55CD1051D36E296004360DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A55CD1071D36E296004360DA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		A55CD1091D36E296004360DA /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A55CD10B1D36E296004360DA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A55CD10E1D36E296004360DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A55CD1051D36E296004360DA /* AppDelegate.swift */,
-				A55CD1071D36E296004360DA /* GameScene.sks */,
+				A51750F31D4C0A04009A3ED7 /* GameScene.sks */,
 				A55CD1091D36E296004360DA /* GameScene.swift */,
 				A51750D11D49780E009A3ED7 /* TitleScreen.sks */,
 				A51750DF1D497D41009A3ED7 /* TitleScreen.swift */,
@@ -172,6 +180,10 @@
 				A55CD1101D36E296004360DA /* Assets.xcassets */,
 				A5F4072D1D483609000AD164 /* Cloud Particles */,
 				A55CD1121D36E296004360DA /* LaunchScreen.storyboard */,
+				A51750F11D4C091C009A3ED7 /* dropDownMenu.png */,
+				A51750EF1D4C0917009A3ED7 /* restartButtonInGame.png */,
+				A51750ED1D4C0913009A3ED7 /* playButtonInGame.png */,
+				A51750EB1D4C073B009A3ED7 /* pauseButton.png */,
 				A51750D51D497888009A3ED7 /* Lucky Cat.png */,
 				A51750DD1D497CB8009A3ED7 /* TitleScreen.png */,
 				A51750CD1D497798009A3ED7 /* Play Button.png */,
@@ -332,7 +344,8 @@
 				A51750C21D495867009A3ED7 /* Bamboo.png in Resources */,
 				A5F407221D483145000AD164 /* Cloud1.png in Resources */,
 				A51750C41D495C09009A3ED7 /* Shuriken.png in Resources */,
-				A55CD1081D36E296004360DA /* GameScene.sks in Resources */,
+				A51750F21D4C091C009A3ED7 /* dropDownMenu.png in Resources */,
+				A51750EC1D4C073B009A3ED7 /* pauseButton.png in Resources */,
 				A55CD1141D36E296004360DA /* LaunchScreen.storyboard in Resources */,
 				A51750DE1D497CB8009A3ED7 /* TitleScreen.png in Resources */,
 				A5F407281D4832F6000AD164 /* Cloud2.sks in Resources */,
@@ -343,14 +356,17 @@
 				A51750EA1D4ABE65009A3ED7 /* ! Black.png in Resources */,
 				A51750E81D4ABD55009A3ED7 /* !.png in Resources */,
 				A51750E61D4A876F009A3ED7 /* avalancheRock.png in Resources */,
+				A51750EE1D4C0913009A3ED7 /* playButtonInGame.png in Resources */,
 				A5AEF3AE1D4043D6007BA947 /* gameMusic.mp3 in Resources */,
 				A51750D01D4977B3009A3ED7 /* ShurikenTitle.png in Resources */,
 				A51750D21D49780E009A3ED7 /* TitleScreen.sks in Resources */,
+				A51750F41D4C0A04009A3ED7 /* GameScene.sks in Resources */,
 				A51750DA1D4979C9009A3ED7 /* MyActions.sks in Resources */,
 				A51750CA1D49778B009A3ED7 /* Sun.png in Resources */,
 				A5F407201D48312D000AD164 /* Cloud1.sks in Resources */,
 				A51750D81D497956009A3ED7 /* Rotating Sun.sks in Resources */,
 				A5F4072A1D4833AB000AD164 /* Cloud3.sks in Resources */,
+				A51750F01D4C0917009A3ED7 /* restartButtonInGame.png in Resources */,
 				A51750C81D495CF0009A3ED7 /* ropeTexture.jpg in Resources */,
 				A5F407241D48315E000AD164 /* Cloud2.png in Resources */,
 				A51750C61D495C13009A3ED7 /* FNB.png in Resources */,

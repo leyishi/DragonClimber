@@ -32,6 +32,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var rockCount = 0                      /* count for number of rocks in avalanche */
     var LeftEPoint: SKSpriteNode!          /* Left exclamation point */
     var RightEPoint: SKSpriteNode!         /* Right exclamation point */
+    var pauseButton: MSButtonNode!         /* pause button to bring menu down */
+    var dropDownMenu: SKSpriteNode!        /* Menu that drops down after pause button is hit */
+    var playButtonInGame: MSButtonNode!    /* Play Button that resumes the game after the pause button is hit; in the menu */
+    var restartButtonInGame: MSButtonNode!  /* Restart Button that restarts the gamea fter the pause button is hit;menu */
     
     override func didMoveToView(view: SKView) {
         /* Setup scene here */
@@ -42,7 +46,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel = self.childNodeWithName("scoreLabel") as! SKLabelNode
         LeftEPoint = self.childNodeWithName("LeftEPoint") as! SKSpriteNode
         RightEPoint = self.childNodeWithName("RightEPoint") as! SKSpriteNode
-        
+        pauseButton = self.childNodeWithName("pauseButton") as! MSButtonNode
+        dropDownMenu = self.childNodeWithName("dropDownMenu") as! SKSpriteNode
+        playButtonInGame = self.childNodeWithName("playButtonInGame") as! MSButtonNode
+        restartButtonInGame = self.childNodeWithName("restartButtonInGame") as! MSButtonNode
         
         /* Set physics world delegate */
         physicsWorld.contactDelegate = self
@@ -95,12 +102,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Calls Clouds func to make clouds appear on screen
         Clouds()
         
+        /* sets drop down menu to be hidden normally */
+        dropDownMenu.hidden = true
+        playButtonInGame.hidden = true
+        restartButtonInGame.hidden = true
+        
+        //paus
+        pauseButton.selectedHandler = pauseGame
     }
     
     func spawnRandomAvalanche() {
         
         let randomTimeAvalanche = Double(arc4random_uniform(10)+15)
-        let randomGen = arc4random_uniform(UInt32(1))
+        let randomGen = arc4random_uniform(UInt32(2))
         let waitAvalanche = SKAction.waitForDuration(3.0)
         let runAvalancheLeft = SKAction.runBlock({
             self.avalancheLeft()
@@ -120,11 +134,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         
         if randomGen == 0 {
+            print(randomGen)
             self.runAction(SKAction.sequence([waitexclamationPoint,runexclamationPointLeft,waitAvalanche,runAvalancheLeft]))
         } else {
-            self.runAction(SKAction.sequence([waitexclamationPoint,runexclamationPointRight,waitAvalanche,runAvalancheRight]))
+            print(randomGen)
+                self.runAction(SKAction.sequence([waitexclamationPoint,runexclamationPointRight,waitAvalanche,runAvalancheRight]))
         }
         
+//        dragon()
         
     }
     
@@ -137,7 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called when a touch begins */
         
         // Get the location of the touch
-        let touch = touches.first!
+        var touch = touches.first!
         let location = touch.locationInNode(scrollLayer)
         let getNode = stoneLayer.nodeAtPoint(location)
         
@@ -164,9 +181,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             target.runAction(reverseLaunchHook)
         }
         
-        
     }
-    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         
@@ -245,20 +260,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Load Cloud1 particle effect */
         let cloud1Particle = SKEmitterNode(fileNamed: "Cloud1.sks")!
-        cloud1Particle.advanceSimulationTime(10)
+        cloud1Particle.advanceSimulationTime(5)
         cloud1Particle.targetNode = scrollLayer
         self.addChild(cloud1Particle)
 
         /* Load Cloud2 particle effect */
         let cloud2Particle = SKEmitterNode(fileNamed: "Cloud2.sks")!
-        cloud2Particle.advanceSimulationTime(10)
-        cloud1Particle.targetNode = scrollLayer
+        cloud2Particle.advanceSimulationTime(5)
+        cloud2Particle.targetNode = scrollLayer
         self.addChild(cloud2Particle)
         
         /* Load Cloud3 particle effect */
         let cloud3Particle = SKEmitterNode(fileNamed: "Cloud3.sks")!
-        cloud3Particle.advanceSimulationTime(10)
-        cloud1Particle.targetNode = scrollLayer
+        cloud3Particle.advanceSimulationTime(5)
+        cloud3Particle.targetNode = scrollLayer
         self.addChild(cloud3Particle)
     }
     
@@ -300,6 +315,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+         //Makes the player die if he is contacted by the avalanche
         let contactA: SKPhysicsBody = contact.bodyA
         let contactB: SKPhysicsBody = contact.bodyB
         
@@ -313,8 +329,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //creates an avalanche on the left side of the screen
     func avalancheLeft() {
+        //creates an avalanche on the left side of the screen
         for i in 0...100 {
             let waitforRock = SKAction.waitForDuration(0.02*Double(i))
             let runBlock = SKAction.runBlock({
@@ -330,8 +346,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 testRock.physicsBody?.affectedByGravity = true
                 self.addChild(testRock)
                 self.rockCount += 1
-                print(self.rockCount)
-                
             })
             self.runAction(SKAction.sequence([waitforRock,runBlock]))
             rockCount = 0
@@ -340,8 +354,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
-    ////creates an avalanche on the right side of the screen
     func avalancheRight() {
+        //creates an avalanche on the right side of the screen
         for i in 0...100 {
             let waitforRock = SKAction.waitForDuration(0.02*Double(i))
             let runBlock = SKAction.runBlock({
@@ -356,7 +370,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 testRock.physicsBody?.affectedByGravity = true
                 self.addChild(testRock)
                 self.rockCount += 1
-                print(self.rockCount)
             })
             self.runAction(SKAction.sequence([waitforRock,runBlock]))
             rockCount = 0
@@ -364,8 +377,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
-    // creates an exclamation point on the left side of the screen
     func flashingExPointLeft() {
+        // creates an exclamation point on the left side of the screen
         let waitTime = 3.0
         let ExWait = SKAction.waitForDuration(waitTime)
         let runLeft = SKAction.runBlock({
@@ -378,8 +391,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    //creates an exclamation point on the right side of the screen
     func flashingExPointRight() {
+        //creates an exclamation point on the right side of the screen
         let waitTime = 3.0
         let ExWait = SKAction.waitForDuration(waitTime)
         let runRight = SKAction.runBlock({
@@ -393,21 +406,82 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
     }
     
-    func dragon() {
-        var shape = SKShapeNode()
-        shape.strokeColor = UIColor.yellowColor()
-        addChild(shape)
+    func pauseGame() {
+        // pauses the game for the drop down menu to appear
         
-        var path = UIBezierPath()
-        path.moveToPoint(<#T##point: CGPoint##CGPoint#>)
-        path.addCurveToPoint(<#T##endPoint: CGPoint##CGPoint#>, controlPoint1: <#T##CGPoint#>, controlPoint2: <#T##CGPoint#>)
-        
-        shape.path = path.CGPath
-        
+        /* set up pause button handler */
+        pauseButton.selectedHandler = {
+            self.dropDownMenu.hidden = false
+            self.playButtonInGame.hidden = false
+            self.restartButtonInGame.hidden = false
+
+            self.paused = true
+        }
     }
-
-
     
+    func continueGame() {
+        // continues the game from the drop down menu
+        
+        /* set up continue button handler */
+        playButtonInGame.selectedHandler = {
+            self.paused = false
+            self.dropDownMenu.hidden = true
+            self.playButtonInGame.hidden = true
+            self.restartButtonInGame.hidden = true
+            
+        }
+    }
     
+    func restartGame() {
+        // restarts the game from the drop down menu
+        
+        /* set up restart button handler */
+        restartButtonInGame.selectedHandler = {
+            /* Grab reference to our SpriteKit view */
+            let skView = self.view as SKView!
+            
+            /* Load Game scene */
+            let scene = GameScene(fileNamed:"GameScene") as GameScene!
+            
+            /* Ensure correct aspect mode */
+            scene.scaleMode = .AspectFill
+            
+            /* Show debug */
+            skView.showsPhysics = true
+            skView.showsDrawCount = true
+            skView.showsFPS = false
+            
+            /* Restart game scene */
+            skView.presentScene(scene)
+        }
+    }
+    
+//    func dragon() {
+//        var shape = SKShapeNode(circleOfRadius: 30)
+//        shape.strokeColor = UIColor.redColor()
+//        shape.lineWidth = 2.0
+//        addChild(shape)
+//        shape.zPosition = 15
+//        
+//        var path = UIBezierPath()
+//        path.moveToPoint(CGPoint(x: 200, y: 400))
+//        path.addLineToPoint(CGPoint(x: 200, y: 150))
+//        path.addLineToPoint(CGPoint(x: 0, y: 0))
+//
+//        
+//        shape.path = path.CGPath
+//        
+//        
+//        var shape2 = SKShapeNode(circleOfRadius: 50)
+//        shape2.zPosition = 16
+//        shape2.strokeColor = UIColor.blueColor()
+//        shape2.fillColor = UIColor.blueColor()
+//        shape2.position = CGPoint(x: 200, y: 400)
+//        shape2.lineWidth = 3
+//        addChild(shape2)
+//        shape2.runAction(SKAction.followPath(shape.path!, speed: 100))
+//        
+//    }
+
     
 }
