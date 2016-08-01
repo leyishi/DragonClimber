@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     enum GameState {                                  /* different game states */
-        case Title, Loading, Playing, Gameover
+        case Title, Paused, Playing, Gameover
     }
     
     var scrollSpeed: CGFloat = 100                 /* Scroll Speed */
@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player: SKSpriteNode! = nil        /* player object that moves to the target */
     var rope: SKShapeNode!                 /* rope between player and target */
     var target: SKSpriteNode!              /* target that player moves to */
-    var gameState: GameState = .Loading    /* game state management */
+    var gameState: GameState = .Playing    /* game state management */
     var scoreLabel: SKLabelNode!           /* score label */
     var points = 0                         /* points counter */
     var rockCount = 0                      /* count for number of rocks in avalanche */
@@ -34,7 +34,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var RightEPoint: SKSpriteNode!         /* Right exclamation point */
     var pauseButton: MSButtonNode!         /* pause button to bring menu down */
     var dropDownMenu: SKSpriteNode!        /* Menu that drops down after pause button is hit */
-    var playButtonInGame: MSButtonNode!    /* Play Button that resumes the game after the pause button is hit; in the menu */
     var restartButtonInGame: MSButtonNode!  /* Restart Button that restarts the gamea fter the pause button is hit;menu */
     
     override func didMoveToView(view: SKView) {
@@ -48,7 +47,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         RightEPoint = self.childNodeWithName("RightEPoint") as! SKSpriteNode
         pauseButton = self.childNodeWithName("pauseButton") as! MSButtonNode
         dropDownMenu = self.childNodeWithName("dropDownMenu") as! SKSpriteNode
-        playButtonInGame = self.childNodeWithName("playButtonInGame") as! MSButtonNode
         restartButtonInGame = self.childNodeWithName("restartButtonInGame") as! MSButtonNode
         
         /* Set physics world delegate */
@@ -104,7 +102,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* sets drop down menu to be hidden normally */
         dropDownMenu.hidden = true
-        playButtonInGame.hidden = true
         restartButtonInGame.hidden = true
         
         //paus
@@ -141,8 +138,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.runAction(SKAction.sequence([waitexclamationPoint,runexclamationPointRight,waitAvalanche,runAvalancheRight]))
         }
         
-//        dragon()
-        
+    }
+    
+    func spawn randomDragon() {
+    
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -154,7 +153,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called when a touch begins */
         
         // Get the location of the touch
-        var touch = touches.first!
+        let touch = touches.first!
         let location = touch.locationInNode(scrollLayer)
         let getNode = stoneLayer.nodeAtPoint(location)
         
@@ -412,23 +411,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* set up pause button handler */
         pauseButton.selectedHandler = {
             self.dropDownMenu.hidden = false
-            self.playButtonInGame.hidden = false
             self.restartButtonInGame.hidden = false
-
             self.paused = true
-        }
-    }
-    
-    func continueGame() {
-        // continues the game from the drop down menu
-        
-        /* set up continue button handler */
-        playButtonInGame.selectedHandler = {
-            self.paused = false
-            self.dropDownMenu.hidden = true
-            self.playButtonInGame.hidden = true
-            self.restartButtonInGame.hidden = true
-            
         }
     }
     
@@ -456,32 +440,44 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-//    func dragon() {
-//        var shape = SKShapeNode(circleOfRadius: 30)
-//        shape.strokeColor = UIColor.redColor()
-//        shape.lineWidth = 2.0
-//        addChild(shape)
-//        shape.zPosition = 15
-//        
-//        var path = UIBezierPath()
-//        path.moveToPoint(CGPoint(x: 200, y: 400))
-//        path.addLineToPoint(CGPoint(x: 200, y: 150))
-//        path.addLineToPoint(CGPoint(x: 0, y: 0))
-//
-//        
-//        shape.path = path.CGPath
-//        
-//        
-//        var shape2 = SKShapeNode(circleOfRadius: 50)
-//        shape2.zPosition = 16
-//        shape2.strokeColor = UIColor.blueColor()
-//        shape2.fillColor = UIColor.blueColor()
-//        shape2.position = CGPoint(x: 200, y: 400)
-//        shape2.lineWidth = 3
-//        addChild(shape2)
-//        shape2.runAction(SKAction.followPath(shape.path!, speed: 100))
-//        
-//    }
+    
+    func dragonLeft() {
+        var shape = SKShapeNode()
+        shape.strokeColor = UIColor.clearColor()
+        shape.position = CGPoint(x: 125, y:0)
+        addChild(shape)
+        shape.zPosition = 15
+        
+        var path = UIBezierPath()
+        path.moveToPoint(CGPoint(x: 0, y: 0))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 50), controlPoint: CGPoint(x: 50,y: 30))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 100), controlPoint: CGPoint(x: -50,y: 80))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 150), controlPoint: CGPoint(x: 50,y: 120))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 200), controlPoint: CGPoint(x: -50,y: 170))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 250), controlPoint: CGPoint(x: 50,y: 220))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 300), controlPoint: CGPoint(x: -50,y: 280))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 350), controlPoint: CGPoint(x: 50,y: 320))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 400), controlPoint: CGPoint(x: -50,y: 380))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 450), controlPoint: CGPoint(x: 50,y: 420))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 500), controlPoint: CGPoint(x: -50,y: 480))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 550), controlPoint: CGPoint(x: 50,y: 520))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 600), controlPoint: CGPoint(x: -50,y: 580))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 650), controlPoint: CGPoint(x: 50,y: 620))
+        path.addQuadCurveToPoint(CGPoint(x: 0,y: 700), controlPoint: CGPoint(x: -50,y: 680))
+        shape.path = path.CGPath
+        
+        
+        
+        var shape2 = SKShapeNode(circleOfRadius: 10)
+        shape2.zPosition = 16
+        shape2.strokeColor = UIColor.blueColor()
+        shape2.fillColor = UIColor.blueColor()
+        shape2.position = CGPoint(x: 125, y:0)
+        shape2.lineWidth = 3
+        addChild(shape2)
+        shape2.runAction(SKAction.followPath(shape.path!, speed: 300))
+        
+    }
 
     
 }
